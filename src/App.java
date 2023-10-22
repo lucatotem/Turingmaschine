@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class App {
+    
 
     private JTextField m_qAnzahl;
     private JTextField m_moeglicheSymboleOhneB;
