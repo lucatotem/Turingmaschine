@@ -2,8 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-import java.util.List;
 
 public class App {
     
@@ -86,7 +87,25 @@ public class App {
                 m_qstrichregel.setText("");
             }
         });
-
+        //
+        regelList.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 1) {
+                    // Perform an action when the JList is clicked once
+                    int selectedIndex = regelList.getSelectedIndex();
+                    if (selectedIndex >= 0) {
+                        String selectedItem[] = regelListModel.getElementAt(selectedIndex).split(" ");
+                        m_qregel.setText(selectedItem[0]);
+                        m_aregel.setText(selectedItem[1]);
+                        m_qstrichregel.setText(selectedItem[2]);
+                        m_bregel.setText(selectedItem[3]);
+                        m_richtungRegel.setText(selectedItem[4]);
+                        // Add your custom action here.
+                    }
+                }
+            }
+        });
         // Define the action when the "Delete Regel" button is pressed
         deleteRegelButton.addActionListener(new ActionListener() {
             @Override
