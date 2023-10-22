@@ -60,9 +60,9 @@ public class TM {
                             stepString = "B"+stepString;
                         }
                     else if (m_Regels.get(i).getM_D()=='R') 
-                        if(m_pointer+3 >= stepString.length()){
+                        if(m_pointer+2 >= stepString.length()){
                             m_pointer++;
-                            stepString = stepString + "B";
+                            stepString = insertString(stepString, stepString.length()-1, "B");
                         } 
                         else{
                             m_pointer++;
@@ -70,7 +70,7 @@ public class TM {
                     else ; // ist N weil Richtungen geprueft sind dann stehen bleiben
 
                     m_jetztq = m_Regels.get(i).getM_qstrich();// setzt  naechsten zustand
-                    stepString = insertString(stepString, m_pointer,  " [" +m_jetztq+"] ") +"\n";
+                    stepString = insertString(stepString, m_pointer,  " [" +m_jetztq+"] ");
 
                     return stepString;
                 }
