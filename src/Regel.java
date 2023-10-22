@@ -28,3 +28,4 @@ public class Regel {
     private char m_D; //Richtung
 
 }
+
