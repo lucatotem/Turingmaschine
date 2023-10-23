@@ -30,7 +30,7 @@ public class App {
     }
 
     public App() {
-        JFrame frame = new JFrame("Dynamic GUI Example");
+        JFrame frame = new JFrame("TM Machine");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 600);  // Adjusted the frame height
         frame.setLayout(new GridLayout(0, 2));
@@ -154,7 +154,7 @@ public class App {
                 TM unsereTM= new TM(qAnfang,qEnde,qAnfang,gamma,sigma,regels);
                 
                 String result = "Schritte:\n"+ unsereTM.calculate(stringValue);
-                JOptionPane.showMessageDialog(null, result, "Result", JOptionPane.INFORMATION_MESSAGE);
+                new Dialogbox(result, 15);
             }
         });
 
