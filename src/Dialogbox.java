@@ -60,8 +60,8 @@ public class Dialogbox {
     }
 
     private void showNextPage(int linesPerPage) {
-        if (currentPage < pages.length - Math.min(currentPage + linesPerPage, pages.length)-1) {
-            currentPage+=Math.min(currentPage + linesPerPage, pages.length);
+        if (currentPage + linesPerPage <  pages.length-1) {
+            currentPage+=linesPerPage;
             showCurrentPage(linesPerPage);
         }
     }

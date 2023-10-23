@@ -179,7 +179,7 @@ public class GUI {
                 TM unsereTM= new TM(qAnfang,qEnde,qAnfang,gamma,sigma,regels);
                 
                 String result = ""+ unsereTM.calculate(stringValue);
-                new Dialogbox(result, 15);
+                new Dialogbox(result+"\n", 15);
             }
         });
 

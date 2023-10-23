@@ -36,11 +36,11 @@ public class TM {
         int indexcap = 0;
         String current = insertString(_toberun, m_pointer, " [" +m_jetztq+"] ")+"\n";// hinzufuegt pointer mit anfangzustand unsere jetztigen zustand zu string
         temp.add(current); // ersten String zu allen hinzufuegen
-        while(m_jetztq != m_endzustandinxed && indexcap < 1000 && current != "error"){
-            if(m_jetztq == m_endzustandinxed) {break;}
+        while(m_jetztq != m_endzustandinxed && indexcap < 1000 && current != "error"){       
             current = calculateStep(current);
             temp.add(current);
         }
+        temp.add("Result:\n"+current.replace("[" + m_jetztq +"] ", "")) ;
         return temp;
     }
 
