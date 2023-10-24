@@ -50,7 +50,7 @@ public class GUI {
         m_richtungRegel = addLabelAndTextField(frame, "Richtung");
     
         JButton addRegelButton = new JButton("Add Regel");
-        JButton fastRegelButton = new JButton( "Add Regel with Text");
+        JButton fastRegelButton = new JButton( "Add Regel mit Text");
         frame.add(fastRegelButton);  
         frame.add(addRegelButton);
         // "Delete Regel" button
